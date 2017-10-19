@@ -6,14 +6,11 @@ De opgave in een Block Comment
 
 De code staat tussen Line Comments.
 Commentarieer deze uit en los de opgave op.
-Gebruik de Webconsole om de
-uitvoer te bekijken en voor de Warnings en Error meldingen.
+Gebruik de Webconsole om de uitvoer te bekijken en voor de Warnings en Error meldingen.
 
 Je code is pas goed als er geen Warnings en Errors zijn!
 
 */
-
-
 
 
 /*
@@ -26,10 +23,11 @@ Je code is pas goed als er geen Warnings en Errors zijn!
 
  */
 
-// function setWidth() {
-//     var width = 100;
-// }
-// console.log(width);
+function setWidth() {
+    var width = 100;
+    console.log(width);
+}
+setWidth();
 
 /*
     Opgave 2.
@@ -39,12 +37,14 @@ Je code is pas goed als er geen Warnings en Errors zijn!
 
  */
 
-// var size = 100;
-// if (size > 50) {
-//     var boxSize = size * 5;
-//     console.log(boxSize);
-// }
-// console.log(boxSize);
+var size = 100;
+function getBoxsize(size) {
+    if (size > 50) {
+        var boxSize = size * 5;
+        console.log(boxSize);
+    }
+}
+getBoxsize(size);
 
 /*
     Opgave 3.
@@ -55,13 +55,15 @@ Je code is pas goed als er geen Warnings en Errors zijn!
 
  */
 
-// let winningPoints = 100;
-// let bonus = false;
-//
-// if (winningPoints > 50) {
-//     let bonus = true;
-// }
-// console.log( bonus);
+// andere scope
+
+let winningPoints = 100;
+let bonus = false;
+
+if (winningPoints > 50) {
+    let bonus = true;
+}
+console.log( bonus);
 
 /*
     Opgave 4.
@@ -70,6 +72,13 @@ Je code is pas goed als er geen Warnings en Errors zijn!
     HINT: Een object maak je met behulp van {}
 
  */
+
+const laptop = {
+    type: "Mac",
+    color: "silver",
+    battery: 44,
+    keyboardType: "qwerty"
+};
 
 /*
     Opgave 5.
@@ -81,17 +90,14 @@ Je code is pas goed als er geen Warnings en Errors zijn!
 
  */
 
-// const person = {
-//     name: 'Bowie',
-//     died: 2012
-// }
-//
-// person = {
-//     name: 'Bowie',
-//     died: 2016
-// }
-//
-// console.log(person);
+const person = {
+    name: 'Bowie',
+    died: 2012
+};
+
+person.died = 2016;
+
+console.log(person);
 
 
 /*
@@ -106,13 +112,13 @@ Je code is pas goed als er geen Warnings en Errors zijn!
 
  */
 
-// var name = 'Lesson 1: ES6 Variables';
-// console.log(name);
-// console.log(window.name);
+var name = 'Lesson 1: ES61 Variables';
+console.log(name);
+console.log(window.name);
 
 /*
     Opgave 7.
-    Herschrijf de code van opgave 6, maak gebruik van de ES6 syntax.
+    Herschrijf de code van opgave 6, maak gebruik van de ES61 syntax.
     OPM: Oh ja, de naam van de variabele mag je dus niet wijzigen.
 
  */
@@ -126,12 +132,12 @@ Je code is pas goed als er geen Warnings en Errors zijn!
 
  */
 
-// function varLeak () {
-//     name = 'een foutje';
-// }
-// varLeak();
-//
-// console.log(window.name);
+function varLeak () {
+    const name = 'een foutje';
+}
+varLeak();
+
+console.log(window.name);
 
 
 /*
@@ -152,18 +158,19 @@ Je code is pas goed als er geen Warnings en Errors zijn!
 //  }
 
 
- /*
-    Temporal Dead Zone
-    Lees documentatie over hoisting na
+/*
+   Temporal Dead Zone
+   Lees documentatie over hoisting na
 
-    Experimenteer met Const en Let, gebruik de console voor error checking
-    
-  */
+   Experimenteer met Const en Let, gebruik de console voor error checking
 
-//  function tdz () {
-//      console.log(dinner);
+ */
 
-
-//      var dinner = 'Lasagna';
-//  }
-//  tdz();
+// function tdz() {
+//     console.log(dinner);
+//
+//
+//     var dinner = 'Lasagna';
+// }
+//
+// tdz();
